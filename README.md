@@ -39,3 +39,12 @@ To do via fierbase
    
 ### 2 évolutions possibles
  - Now i can remove some code to iterate it more (will do it tommorow)
+
+### missing
+open item in tab and visual
+change tooltip
+data init dont remove item
+firebase
+format code better way (Add card and list => one component) 
+create a component for card maybe
+correct and handle error
