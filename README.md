@@ -29,9 +29,13 @@ You can add your list and card related. You can add visibility and a description
 To do via fierbase
 
 ## Bilan
-###2 difficultés
+### 2 difficultés
  - lossing time multiple time on 'font', 'icon', 'interface and wanting to create a json data init'
-###2 success
+
+   
+### 2 success
  - First time finishing a project using typescript and next, I felt at ease most part of the time.
-###2 évolutions possibles
+
+   
+### 2 évolutions possibles
  - Now i can remove some code to iterate it more (will do it tommorow)
