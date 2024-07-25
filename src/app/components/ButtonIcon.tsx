@@ -18,7 +18,7 @@ export default function ButtonIcon({ Icon, onClick, tooltiptext }: IconButtonPro
       onClick={onClick}
     >
       <Tooltip title={tooltiptext} placement="bottom">
-      {Icon && <Icon sx={{ fontSize: 22 }} />}
+      {Icon && <Icon sx={{ fontSize: 20 }} />}
       </Tooltip>
     </Box>
   );

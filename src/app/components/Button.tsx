@@ -1,7 +1,6 @@
 'use client';
 
 import Box from "@mui/system/Box";
-
 import styles from "./button.module.css";
 
 interface ButtonProps {
@@ -19,7 +18,7 @@ export default function Button({ title, onClick, color, bgcolor }: ButtonProps) 
         bgcolor: bgcolor,
         color: color,
       }}
-      onClick={() => onClick}
+      onClick={onClick}
     >
       {title}
     </Box>

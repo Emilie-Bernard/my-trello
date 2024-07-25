@@ -18,7 +18,6 @@
   color:rgb(97, 97, 97);
   position: relative;
   top: -4px;
-  background-color: transparent;
   border: 0px;
   border-radius: 3px;
   height: 32px;
@@ -26,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .btnicon:hover {
@@ -55,8 +55,16 @@
   width: 272px;
   height: 40px;
   color: white;
-  background-color: #ffffff50;
+  background-color: #ffffff40;
 }
 .listbtnstyle:hover {
   background-color: #ffffff60;
+}
+.iconClose {
+  cursor: pointer;
+  padding-left: 6px;
+}
+.iconClose:hover {
+  cursor: pointer;
+  color: rgb(49, 49, 49);
 }

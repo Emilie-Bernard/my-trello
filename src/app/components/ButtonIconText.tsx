@@ -19,7 +19,7 @@ export default function ButtonIconText({ Icon, title, onClick, type }: ButtonIco
       className={`${styles.btnicontext} ${type === "card" ? styles.cardbtnstyle : styles.listbtnstyle}`}
       onClick={onClick}
     >
-      {Icon && <Icon sx={{ fontSize: 22 }} />}
+      {Icon && <Icon sx={{ fontSize: 20 }} />}
       {title}
     </Box>
   );
