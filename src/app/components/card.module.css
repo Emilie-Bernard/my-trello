@@ -1,0 +1,65 @@
+.cardslayout {
+  gap: 8px;
+}
+.cardslayout:first-child {
+  padding-left: 8px;
+  display: flex;
+  flex-direction: row;
+}
+.cardlayout {
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ebecf0;
+  color: rgb(49, 49, 49);
+  width: 272px;
+}
+.titlebox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 8px;
+  justify-content: space-between;
+}
+.titletext {
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0 8px;
+  line-height: 26px;
+}
+.listincard {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8px;
+  gap: 8px;
+}
+.addincard {
+  padding: 8px;
+}
+.itemincard {
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 0px;
+}
+.titleitem {
+  align-items: center;
+  color: rgb(49, 49, 49);
+  display: flex;
+  font-size: 14px;
+  font-weight: 400;
+  height: 32px;
+  line-height: 20px;
+  margin: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: left;
+}
+.iconsitem {
+  display: flex;
+  line-height: 20px;
+  margin: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: left;
+}
