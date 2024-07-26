@@ -8,9 +8,9 @@ import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import SubjectOutlinedIcon from "@mui/icons-material/SubjectOutlined";
 
 import styles from "./card.module.css";
-import ButtonIcon from "./ButtonIcon";
+import ButtonIcon from "./ButtonIconTooltip";
 import ButtonIconText from "./ButtonIconText";
-import AddCard from "@/app/components/AddCard";
+import AddValue from "@/app/components/AddValue";
 
 import IItemProps from "@/app/types/IItemProps";
 
@@ -19,9 +19,10 @@ interface CardFncProps {
   list: IItemProps[];
   onDelete: () => void;
   onAdd: (title: string) => void;
+  onModifyCard: (itemIndex: number) => void;
 }
 
-export default function Card({ title, list, onDelete, onAdd }: CardFncProps) {
+export default function Card({ title, list, onDelete, onAdd, onModifyCard }: CardFncProps) {
   const [displayAddCard, setDisplayAddCard] = useState(false); 
   const onIconClick = () => {
     const valid = confirm(`Vous allez supprimer la liste nommée My second list.
@@ -40,11 +41,11 @@ Ou sur "Annuler" pour fermer.`);
         />
       </Box>
       <Box className={styles.listincard}>
-        {list.map((item) => (
+        {list.map((item, index) => (
           <Box
             className={styles.itemincard}
-            onClick={() => console.log("open item")}
-            key={item.title + item.follow + item.description}
+            onClick={() => onModifyCard(index)}
+            key={index}
           >
             <Box className={styles.titleitem}>{item.title}</Box>
             <Box className={styles.iconsitem}>
@@ -62,7 +63,7 @@ Ou sur "Annuler" pour fermer.`);
           }}
           title="Ajouter une autre carte"
           type="card"
-        /> : <AddCard onValid={(text) => onAdd(text)} onClose={() => setDisplayAddCard(false)}/>}
+        /> : <AddValue type="card" onValid={(text) => onAdd(text)} onClose={() => setDisplayAddCard(false)}/>}
       </Box>
     </Box>
   );

@@ -1,25 +1,18 @@
-'use client';
+import IconButton from "@mui/material/IconButton";
 
 import Box from "@mui/system/Box";
 
 import styles from "./button.module.css";
-import Tooltip from '@mui/material/Tooltip';
 
 interface IconButtonProps {
   Icon: React.ElementType;
   onClick: () => void;
-  tooltiptext: string;
 }
 
-export default function ButtonIcon({ Icon, onClick, tooltiptext }: IconButtonProps) {
+export default function ButtonIcon({ Icon, onClick }: IconButtonProps) {
   return (
-    <Box
-      className={styles.btnicon}
-      onClick={onClick}
-    >
-      <Tooltip title={tooltiptext} placement="bottom">
-      {Icon && <Icon sx={{ fontSize: 20 }} />}
-      </Tooltip>
-    </Box>
+    <IconButton onClick={onClick} aria-label="delete">
+      <Icon sx={{ fontSize: 20 }} />
+    </IconButton>
   );
 }
