@@ -6,16 +6,7 @@ import styles from "./header.module.css";
 
 export default function Header() {
   return (
-    <Box
-      sx={{
-        height: 40,
-        width: "100%",
-        bgcolor: "#111111",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <Box className={styles.navbar}>
       <Link href="/">
         <Image
           src="/trello.png"

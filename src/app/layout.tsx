@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local'
+import { Inter } from 'next/font/google'
 import "./globals.css";
 
-const trelloFont = localFont({
-  src: './fonts/trellicons-regular.ttf',
-  variable: '--font-surt-bold',
-})
 export const metadata: Metadata = {
   title: "Next Trello",
   description: "Web site created using create-react-app",
@@ -13,14 +9,17 @@ export const metadata: Metadata = {
     icon: '/trello-favicon.png',
   },
 };
+
+const inter = Inter({ subsets: ["latin"] });
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={trelloFont.className}>{children}</body>
+    <html lang="fr">
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

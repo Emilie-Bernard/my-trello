@@ -12,6 +12,8 @@ import ButtonIcon from "./ButtonIconTooltip";
 import ButtonIconText from "./ButtonIconText";
 import AddValue from "@/app/components/AddValue";
 
+import { SxProps } from '@mui/system';
+
 import IItemProps from "@/app/types/IItemProps";
 
 interface CardFncProps {
@@ -30,6 +32,14 @@ Appuyez sur "OK" pour continuer.
 Ou sur "Annuler" pour fermer.`);
     if (valid) onDelete();
   }
+  
+  const iconStyles: SxProps = {
+    color: 'rgb(145, 145, 145)',
+    width: '16px',
+    height: '16px',
+    marginBottom: '4px',
+  };
+  
   return (
     <Box className={styles.cardlayout}>
       <Box className={styles.titlebox}>
@@ -49,8 +59,8 @@ Ou sur "Annuler" pour fermer.`);
           >
             <Box className={styles.titleitem}>{item.title}</Box>
             <Box className={styles.iconsitem}>
-              {item.follow && <RemoveRedEyeOutlinedIcon sx={{ color: "rgb(145, 145, 145)", witdh: "16px", height: "16px", marginBottom: "4px" }} />}
-              {item.description && <SubjectOutlinedIcon sx={{ color: "rgb(145, 145, 145)", witdh: "16px", height: "16px", marginBottom: "4px" }} />}
+              {item.follow && <RemoveRedEyeOutlinedIcon sx={iconStyles} />}
+              {item.description && <SubjectOutlinedIcon sx={iconStyles} />}
             </Box>
           </Box>
         ))}

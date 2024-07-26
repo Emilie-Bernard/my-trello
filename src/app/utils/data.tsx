@@ -1,5 +1,4 @@
 import ICardProps from "@/app/types/ICardProps";
-import { cp } from "fs";
 
 export const initData: { cardlist: ICardProps[] } = {
   cardlist: [
@@ -34,8 +33,4 @@ export const initData: { cardlist: ICardProps[] } = {
       ],
     },
   ],
-};
-
-export const getFromLocalStorage = (key: string) => {
-    if (typeof window !== 'undefined' && window.localStorage) return localStorage.getItem(key);
 };
