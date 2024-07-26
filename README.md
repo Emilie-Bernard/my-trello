@@ -26,7 +26,7 @@ You can add your list and card related. You can add visibility and a description
 
 ## Link
 
-To do via fierbase
+(https://my-trello-ferway-emilie.web.app/
 
 ## Bilan
 ### 2 difficultés
@@ -42,9 +42,14 @@ To do via fierbase
 
 ### missing
 modofy item in data
+
 data init dont remove item
+
 firebase
+
 format code better way () 
+
 correct and handle error
+
 cut modal component to smaller organism
 change architecture
