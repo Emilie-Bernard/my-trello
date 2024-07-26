@@ -30,6 +30,7 @@ This application is available at:
 https://my-trello-ferway-emilie.web.app/
 
 ## Bilan
+Really like this project, it challenge me a lot. It was my first time working on typescript and next (I start another project last week in this stack byt didn't work as much as these 18 hours) I leart a lot and it as a great pleasure. I search with stack overflow, nextjs documentation and other forum. It was great not to ask everything at chatgpt (only ask few stuff i was blocking on as localStorage (didn't answer me well), typeformat for init data and interface). 
 ### 2 difficulties
 - wanting to create a json file with initData to put it as default value but problem with interface (i create an object interface in tsx to correct this)
 - localstorage value not found with difference between dev and build
