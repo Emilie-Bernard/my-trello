@@ -79,6 +79,9 @@ export default function AddCard({
           onChange={(event) => setValue(event.target.value)}
           className={styles.textfield}
           placeholder={placeholderTitle}
+          onKeyDown={(event) => {
+            if (event.key === "Enter") validation();
+          }}
         />
       ) : (
         <textarea
