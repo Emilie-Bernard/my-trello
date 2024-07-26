@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from 'next/font/local'
 import "./globals.css";
 
-
 const trelloFont = localFont({
   src: './fonts/trellicons-regular.ttf',
   variable: '--font-surt-bold',

@@ -37,7 +37,10 @@ export default function CardModal({
     const valid = confirm(`Vous allez supprimer la carte nommée ${card.title}.
 Appuyez sur "OK" pour continuer.
 Ou sur "Annuler" pour fermer.`);
-    if (valid) onDelete();
+    if (valid) {
+        onDelete();
+        onClose();
+    }
   };
   return (
     <Dialog
@@ -56,7 +59,7 @@ Ou sur "Annuler" pour fermer.`);
           <Box className={styles.inlist}>
             <Box>
               Dans la liste{" "}
-              <span className={styles.underline}>{card.title}</span>
+              <span className={styles.underline}>{cardlist[modifyItemIndex[0]].title}</span>
             </Box>
             {card.follow && (
               <RemoveRedEyeOutlinedIcon
@@ -73,13 +76,13 @@ Ou sur "Annuler" pour fermer.`);
           <Box sx={{ flexGrow: 1 }}>
             <Box className={styles.descriptionmodaltitle}>Description</Box>
             {validate ? (
-              <AddValue type='description' onValid={(text) => onChange({ ...card, description: text })} onClose={() => setValidate(false)}/>
+              <AddValue type='description' defaultValue={card.description} onValid={(text) => onChange({ ...card, description: text })} onClose={() => setValidate(false)}/>
             ) : (
               <Box
                 sx={{ cursor: "pointer", fontSize: "14px" }}
                 onClick={() => setValidate(true)}
               >
-                {card.description ? (
+                {card.description.length > 0 ? (
                   card.description
                 ) : (
                   <Box className={styles.textfield}>

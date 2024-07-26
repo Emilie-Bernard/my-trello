@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "my-trello-ferway-emilie",
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

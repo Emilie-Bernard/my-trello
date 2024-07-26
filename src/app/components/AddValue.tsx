@@ -23,7 +23,7 @@ export default function AddCard({
   const [placeholderTitle, setPlaceholderTitle] = useState("");
   const [validTitle, setValidTitle] = useState("");
 
-  const ref =  useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const handleClickOutside = (event: any) => {
       if (ref.current && !ref.current.contains(event.target)) {
@@ -54,9 +54,19 @@ export default function AddCard({
   }, [type]);
 
   const validation = () => {
-    onValid(value);
-    onClose();
-    setValue("");
+    const valuetrimed = value.trim();
+
+    if (valuetrimed.length > 1) {
+      onValid(valuetrimed);
+      onClose();
+      setValue("");
+      return;
+    }
+    else if (type === "description") {
+      onValid(valuetrimed);
+      onClose();
+      setValue("");
+    }
   };
 
   return (
@@ -72,13 +82,13 @@ export default function AddCard({
         />
       ) : (
         <textarea
-          autoFocus={type === "card"}
+          autoFocus
           value={value}
           className={type === "card" ? styles.multiline : styles.description}
           onChange={(event) => setValue(event.target.value)}
           placeholder={placeholderTitle}
           onKeyDown={(event) => {
-            if (event.key === "Enter") validation();
+            if (event.key === "Enter" && type === "card") validation();
           }}
         />
       )}
