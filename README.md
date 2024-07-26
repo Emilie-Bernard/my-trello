@@ -41,10 +41,10 @@ To do via fierbase
  - Now i can remove some code to iterate it more (will do it tommorow)
 
 ### missing
-open item in tab and visual
-change tooltip
+modofy item in data
 data init dont remove item
 firebase
-format code better way (Add card and list => one component) 
-create a component for card maybe
+format code better way () 
 correct and handle error
+cut modal component to smaller organism
+change architecture
