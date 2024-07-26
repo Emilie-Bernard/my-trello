@@ -5,10 +5,9 @@ import Box from "@mui/system/Box";
 import Close from "@mui/icons-material/Close";
 import Dialog from "@mui/material/Dialog";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
-import SubjectOutlinedIcon from "@mui/icons-material/SubjectOutlined";
 import RemoveIcon from "@mui/icons-material/Remove";
 
-import styles from "./card.module.css";
+import styles from "./modal.module.css";
 import ButtonIconText from "./ButtonIconText";
 
 import IItemProps from "@/app/types/IItemProps";
