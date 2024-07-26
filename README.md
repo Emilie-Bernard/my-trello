@@ -31,23 +31,18 @@ https://my-trello-ferway-emilie.web.app/
 
 ## Bilan
 ### 2 difficultés
- - lossing time multiple time on 'font', 'icon', 'interface and wanting to create a json data init'
+ - lossing time multiple time on 'font', 'icon', 'typescript interface by wanting to create a json data init'
 
-   
 ### 2 success
- - First time finishing a project using typescript and next, I felt at ease most part of the time.
+ - First time finishing a project using typescript and next (felt confortable), I felt at ease most part of the time.
+ - One component to add value (add list, card and description)
 
-   
 ### 2 évolutions possibles
  - Now i can remove some code to iterate it more (will do it tommorow)
+ - better architecture
 
 ### missing
-modofy item in data
-
-data init dont remove item
-
-firebase
-
+cache data
 format code better way () 
 
 correct and handle error
