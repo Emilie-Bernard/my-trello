@@ -24,9 +24,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 This is a trello created with Next, React and Typescript.
 You can add your list and card related. You can add visibility and a description to cards. 
 
-## Link
+## URL to access
+This application is available at:
 
-To do via fierbase
+https://my-trello-ferway-emilie.web.app/
 
 ## Bilan
 ### 2 difficultés
@@ -41,10 +42,15 @@ To do via fierbase
  - Now i can remove some code to iterate it more (will do it tommorow)
 
 ### missing
-open item in tab and visual
-change tooltip
+modofy item in data
+
 data init dont remove item
+
 firebase
-format code better way (Add card and list => one component) 
-create a component for card maybe
+
+format code better way () 
+
 correct and handle error
+
+cut modal component to smaller organism
+change architecture
