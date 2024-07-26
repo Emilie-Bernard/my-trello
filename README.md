@@ -24,9 +24,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 This is a trello created with Next, React and Typescript.
 You can add your list and card related. You can add visibility and a description to cards. 
 
-## Link
+## URL to access
+This application is available at:
 
-(https://my-trello-ferway-emilie.web.app/
+https://my-trello-ferway-emilie.web.app/
 
 ## Bilan
 ### 2 difficultés
