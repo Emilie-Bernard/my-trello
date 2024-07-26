@@ -30,22 +30,14 @@ This application is available at:
 https://my-trello-ferway-emilie.web.app/
 
 ## Bilan
-### 2 difficultés
- - lossing time multiple time on 'font', 'icon', 'typescript interface by wanting to create a json data init'
+### 2 difficulties
+- wanting to create a json file with initData to put it as default value but problem with interface (i create an object interface in tsx to correct this)
+- localstorage value not found with difference between dev and build
 
 ### 2 success
- - First time finishing a project using typescript and next (felt confortable), I felt at ease most part of the time.
- - One component to add value (add list, card and description)
+ - First time finishing a project using typescript and next (felt confortable), I felt at ease most part of the time. 
+ - One component to add all the different type of value (add list, card and description)
 
-### 2 évolutions possibles
- - Now i can remove some code to iterate it more (will do it tommorow)
- - better architecture
-
-### missing
-cache data
-format code better way () 
-
-correct and handle error
-
-cut modal component to smaller organism
-change architecture
+### 2 evolutions possibles
+ - I think i can cut the modal componant to create smaller organism
+ - I think I can chang the architecture to be more understandable and to class component by size and type (Buttons all togerther, organism and atom folder maybe)
