@@ -1,26 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import Header from "@/app/layout/Header";
 import Box from "@mui/system/Box";
 import Button from "@/app/components/Button";
 import CardsList from "@/app/components/CardsList";
-import { initData } from "@/app/utils/data";
+import { initData, getFromLocalStorage } from "@/app/utils/data";
 
 import ICardProps from "@/app/types/ICardProps";
 import IItemProps from "@/app/types/IItemProps";
 import CardModal from "./components/CardModal";
 
 export default function Home() {
-  const [cardlist, setCardlist] = useState<ICardProps[]>(
-    JSON.parse(JSON.stringify(initData.cardlist))
-  );
+  const defaultList =  getFromLocalStorage("cardlist") || JSON.stringify(initData.cardlist);
+  const [cardlist, setCardlist] = useState<ICardProps[]>(JSON.parse(defaultList));
   const [cardModalOpen, setCardModalOpen] = useState(false);
   const [modifyItemIndex, setModifyItemIndex] = useState<[number, number] | []>(
     []
   );
-
+  
   const initDataFnc = () => {
     console.log("initData", initData.cardlist);
     console.log("cardlist", cardlist);
@@ -69,6 +68,11 @@ export default function Home() {
     });
     setCardlist(cards);
   };
+
+  useEffect(() => {
+    console.log(cardlist);
+    localStorage.setItem('cardlist', JSON.stringify(cardlist));
+  }, [cardlist]);
   return (
     <div>
       <Header />
