@@ -13,7 +13,7 @@ import IItemProps from "@/app/types/IItemProps";
 import CardModal from "./components/CardModal";
 
 export default function Home() {
-  const storedData = localStorage.getItem('cardlist');
+  const storedData = typeof window !== 'undefined' && window.localStorage?.getItem('cardlist');
   const [cardlist, setCardlist] = useState<ICardProps[]>(storedData && JSON.parse(storedData) ||  initData.cardlist);
   const [cardModalOpen, setCardModalOpen] = useState(false);
   const [modifyItemIndex, setModifyItemIndex] = useState<[number, number] | []>([]);
@@ -60,7 +60,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    localStorage.setItem('cardlist', JSON.stringify(cardlist));
+    window?.localStorage.setItem('cardlist', JSON.stringify(cardlist));
   }, [cardlist]);
 
   return (
